@@ -28,10 +28,10 @@ async def answer(bot, query):
     for file in files:
         results.append(
             InlineQueryResultCachedDocument(
-                title=file.caption,
+                title=file.file_name,
                 file_id=file.file_id,
                 caption=file.caption or "@MemesDzeb",
-                description=f'Size: {get_size(file.file_size)}\nType: {file.file_type}',
+                description=f'Channel: @MemesDzeb',
                 reply_markup=reply_markup))
 
     if results:
